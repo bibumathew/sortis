@@ -1,10 +1,10 @@
-## Sortis - A springboard for developers who are also Twitter power users
+## Sortis - A twitter client for power users, and a springboard for developers
 
 Sortis is a twitter client for managing the tweets you've favorited. More importantly, it's a springboard to create your own twitter based applications (and learn tech along the way).
 
 ## It's for developers
 
-This app isn't deployed anywhere for use by the public. It is meant to be deployed **by you, the developer**. Sortis is a single user application that you can deploy to the **NodeJS** provider of your choice (I've included instructions for deploying to Nodejitsu, Heroku). **You own the code and the data. Extend this app as you see fit. Make your own twitter mashups. Publish your code for others to learn, fork, extend and deploy**.
+This app isn't deployed anywhere for use by the public. It is meant to be deployed **by you, the developer**. Sortis is a single user application that you can deploy to the **NodeJS** provider of your choice (I've included instructions for deploying to Nodejitsu and Heroku). **You own the code and the data. Extend this app as you see fit. Make your own twitter mashups. Publish your code for others to learn, fork, extend and deploy**.
 
 Sortis can be set up **freely** on cloud based offerings and trial accounts. You can run this entire app locally too if you don't want to subscribe to any (potentially) for-pay services.
 
@@ -16,7 +16,7 @@ Here is the inbox, this view uses [Twitter's Rest Apis](https://dev.twitter.com/
 
 <img src="inbox.png" />
 
-Tweets can be sorted, tagged, and categorized. Once a tweet is sorted, the tweet is unfavorited from Twitter and stored entirely in your app (using [Redis](http://redis.io/). Here is a screen shot of the sorted screen:
+Tweets can be sorted, tagged, and categorized. Once a tweet is sorted, the tweet is unfavorited from Twitter and stored entirely in your app (using [Redis](http://redis.io/)). Here is a screen shot of the sorted screen:
 
 <img src="sorted.png" />
 
@@ -175,7 +175,7 @@ now deploy:
 
     jitsu deploy
 
-note: if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run. Ideally (once you get the hang of deploying this app, you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for nodejitsu use `jitsu help env`.
+note: if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for nodejitsu use `jitsu help env`.
 
 Here is what secret.js may look like after migrating everything over to environment variables:
 
@@ -212,7 +212,7 @@ Git deploy your app:
 
     git push heroku master
 
-note: if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run. Ideally (once you get the hang of deploying this app, you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for heroku use `heroku help config`
+note: if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for heroku use `heroku help config`
 
 Here is what secret.js may look like after migrating everything over to environment variables:
 
