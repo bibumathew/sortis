@@ -54,15 +54,11 @@ Set up the application with the following settings. Anywhere you see amirrajan, 
 
 <img src="twitter-app-settings.png" />
 
-continued...
-
 <img src="twitter-app-settings-2.png" />
 
-note: "Allow this application to be used to Sign in with Twitter" should be **unchecked** (just poor mouse placement + screen shotting on my part)
+*Note: "Allow this application to be used to Sign in with Twitter" should be **unchecked** (just poor screenshot mouse placement on my part)*
 
-Once your twitter account is set up take the sample secret file located at `lib\secret.js.sample` and create `lib\secret.js`, update the twitter related values:
-
-For this step, update just the four Twitter-related values, plus the 'callBackUrl' in `lib\secret.js`:
+Once your twitter account is set up, create `lib\secret.js` by duplicating `lib\secret.js.sample` then update *just* the four Twitter-related values, plus the 'callBackUrl' in `lib\secret.js`:
 
     //sample secret.js
     module.exports = {
