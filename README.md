@@ -179,7 +179,7 @@ now deploy:
 
     jitsu deploy
 
-note: if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for nodejitsu use `jitsu help env`.
+note: **if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run**. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for nodejitsu use `jitsu help env`.
 
 Here is what secret.js may look like after migrating everything over to environment variables:
 
@@ -216,7 +216,7 @@ Git deploy your app:
 
     git push heroku master
 
-note: if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for heroku use `heroku help config`
+note: **if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run**. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for heroku use `heroku help config`
 
 Here is what secret.js may look like after migrating everything over to environment variables:
 
