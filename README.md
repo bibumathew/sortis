@@ -2,7 +2,7 @@
 
 Sortis is a twitter client for managing the tweets you've favorited. More importantly, it's a springboard to create your own twitter based applications (and learn tech along the way).
 
-Tech: **NodeJS, AngularJS, ExpressJS, Redis, Twitter Rest Api's**
+Tech: NodeJS, AngularJS, ExpressJS, Redis, Twitter Rest Api's
 
 License: MIT
 
