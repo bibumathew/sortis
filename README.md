@@ -16,7 +16,7 @@ Here is the inbox, this view uses [Twitter's Rest Apis](https://dev.twitter.com/
 
 <img src="inbox.png" />
 
-Tweets can be sorted, tagged, and categorized. Once a tweet is sorted, the tweet is unfavorited from Twitter and stored entirely in your app (using [Redis](http://redis.io/). Here is a screen shot of the sorted screen:
+Tweets can be sorted, tagged, and categorized. Once a tweet is sorted, the tweet is unfavorited from Twitter and stored entirely in your app (using [Redis](http://redis.io/)). Here is a screen shot of the sorted screen:
 
 <img src="sorted.png" />
 
