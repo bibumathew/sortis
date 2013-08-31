@@ -60,6 +60,8 @@ continued...
 
 Once your twitter account is set up take the sample secret file located at `lib\secret.js.sample` and create `lib\secret.js`, update the twitter related values:
 
+For this step, update just the four Twitter-related values, plus the 'callBackUrl' in `lib\secret.js`:
+
     //sample secret.js
     module.exports = {
         "consumerKey": "", //set this value from twitter
