@@ -34,7 +34,7 @@ Then clone this repo:
 
     git clone https://github.com/amirrajan/sortis.git
 
-And `cd` into the directory (all instructions below assume you are in the `sorits` directory:
+And `cd` into the directory (all instructions below assume you are in the `sortis` directory:
 
     cd sortis
 
