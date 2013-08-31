@@ -1,0 +1,55 @@
+<!--
+  this page is pretty much identical to index.ejs,
+  go there for detailed comments
+-->
+<% include header %>
+
+<script src="/public/app/ngEnter.js"></script>
+<script src="/public/app/tagcloud.js"></script>
+<script src="/public/app/archived.js"></script>
+
+<div id="dashboard" ng-app="App" ng-controller="AppCtrl">
+  <h3>archived ({{ archived.length }})</h3>
+  <hr/>
+  <div class="row" style="margin-bottom: 20px">
+    <input type="text" placeholder="search: type search term" ng-enter="search()" ng-model="searchString" class="col-xs-12 col-md-8" />
+    <div class="clearfix visible-xs visible-sm" style="margin-top: 10px"></div>
+    <a href="javascript:;" ng-click="search()" class="col-md-2">search</a>
+    <a href="javascript:;" ng-click="clearSearch()" class="col-md-2">clear</a>
+  </div>
+
+  <div class="row" style="margin-bottom: 20px">
+    <a href="javascript:;" class="wordwrap col-xs-10 col-sm-6 col-md-6" ng-click="filterOnTag(entry)" ng-repeat="entry in tagCloud | orderBy:sortTag"><span ng-class="{ importantTag: entry.important }">({{entry.count}}) {{entry.tag}}</span></a>
+  </div>
+
+  <div class="row border tweet" ng-repeat="entry in archived | filter: { show: true }">
+    <div class="row">
+      <img class="profile-pic col-md-2 pull-right" style="margin-right: 10px;" src="{{ entry.user.profile_image_url }}" />
+      <div class="col-md-10">
+        {{ entry.user.name }} (@{{ entry.user.screen_name}}):
+        <br/>
+        <span class="wordwrap">{{ entry.text }}</span>
+        <div style="margin-top: 5px" ng-repeat="link in entry.links_in_text">
+          <a class="wordwrap" href="{{ link.expanded_url }}" target="_blank">{{ link.display_url }}</a>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div ng-hide="entry.editing">
+      Tags: {{ entry.tags }} <a href="javascript:;" ng-click="edit(entry)">add/edit</a>
+    </div>
+    <div ng-show="entry.editing">
+      <input class="col-md-10" ng-model="entry.tags" ng-enter="saveTags(entry)" style="margin-right: 5px" type="text" placeholder="Tags (space delmited): funny code todo" />
+      <div class="clearfix visible-xs visible-sm" style="margin-top: 10px"></div>
+      <a href="javascript:;" ng-click="saveTags(entry)">save</a>
+    </div>
+    <hr />
+    <div class="col-md-12">
+      <a target="_blank" href="http://twitter.com/{{ entry.user.screen_name }}/status/{{ entry.id_str }}">view</a> 
+      <div class="clearfix visible-xs visible-sm" style="margin-top: 30px"></div>
+      <a class="pull-right" href="javascript:;" ng-click="markDeleted(entry)">delete from here (not twitter)</a>
+    </div>
+  </div>
+</div>
+
+<% include footer %>

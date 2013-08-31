@@ -1,0 +1,66 @@
+<!--
+  this page is pretty pretty bland, take a look at /views/index.ejs
+  for a meatier page
+-->
+<% include header %>
+
+<script src="/public/app/ngEnter.js"></script>
+<script src="/public/app/tagcloud.js"></script>
+<script src="/public/app/export.js"></script>
+
+<div id="dashboard" ng-app="App" ng-controller="AppCtrl">
+  <div>[Inbox]</div>
+  <br/>
+  <div ng-repeat="entry in inbox">
+    [Url] <a href="http://twitter.com/{{ entry.user.screen_name }}/status/{{ entry.id_str }}">http://twitter.com/{{ entry.user.screen_name }}/status/{{ entry.id_str }}</a>
+    <br/>
+    [Name] {{ entry.user.name }}
+    <br/>
+    [Handle] @{{ entry.user.screen_name}}
+    <br/>
+    [Text] {{ entry.text }}
+    <br/>
+    [Tags] {{ entry.tags }} 
+    <br/>
+    ======
+    <br/>
+    <br/>
+  </div>
+
+  <div>[Sorted]</div>
+  <br/>
+  <div ng-repeat="entry in sorted">
+    [Url] <a href="http://twitter.com/{{ entry.user.screen_name }}/status/{{ entry.id_str }}">http://twitter.com/{{ entry.user.screen_name }}/status/{{ entry.id_str }}</a>
+    <br/>
+    [Name] {{ entry.user.name }}
+    <br/>
+    [Handle] @{{ entry.user.screen_name}}
+    <br/>
+    [Text] {{ entry.text }}
+    <br/>
+    [Tags] {{ entry.tags }} 
+    <br/>
+    ======
+    <br/>
+    <br/>
+  </div>
+
+  <div>[Archived]</div>
+  <br/>
+  <div ng-repeat="entry in archived">
+    [Url] <a href="http://twitter.com/{{ entry.user.screen_name }}/status/{{ entry.id_str }}">http://twitter.com/{{ entry.user.screen_name }}/status/{{ entry.id_str }}</a>
+    <br/>
+    [Name] {{ entry.user.name }}
+    <br/>
+    [Handle] @{{ entry.user.screen_name}}
+    <br/>
+    [Text] {{ entry.text }}
+    <br/>
+    [Tags] {{ entry.tags }} 
+    <br/>
+    ======
+    <br/>
+    <br/>
+  </div>
+
+<% include footer %>
