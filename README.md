@@ -4,7 +4,7 @@ Sortis is a twitter client for managing the tweets you've favorited. More import
 
 ## It's for developers
 
-This app isn't deployed anywhere for use by the public. It is meant to be deployed **by you, the developer**. Sortis is a single user application that you can deploy to the **NodeJS** provider of your choice (I've included instructions for deploying to Nodejitsu, Heroku). **You own the code and the data. Extend this app as you see fit. Make your own twitter mashups. Publish your code for others to learn, fork, extend and deploy**.
+This app isn't deployed anywhere for use by the public. It is meant to be deployed **by you, the developer**. Sortis is a single user application that you can deploy to the **NodeJS** provider of your choice (I've included instructions for deploying to Nodejitsu and Heroku). **You own the code and the data. Extend this app as you see fit. Make your own twitter mashups. Publish your code for others to learn, fork, extend and deploy**.
 
 Sortis can be set up **freely** on cloud based offerings and trial accounts. You can run this entire app locally too if you don't want to subscribe to any (potentially) for-pay services.
 
