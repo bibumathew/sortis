@@ -1,4 +1,4 @@
-## Sortis - A twitter client for power users, and a spring board for developers
+## Sortis - A twitter client for power users, and a springboard for developers
 
 Sortis is a twitter client for managing the tweets you've favorited. More importantly, it's a springboard to create your own twitter based applications (and learn tech along the way).
 
