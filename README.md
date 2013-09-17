@@ -2,6 +2,10 @@
 
 Sortis is a twitter client for managing the tweets you've favorited. More importantly, it's a springboard to create your own twitter based applications (and learn tech along the way).
 
+Tech: NodeJS, AngularJS, ExpressJS, Redis, Twitter Rest Api's
+
+License: MIT
+
 ## It's for developers
 
 This app isn't deployed anywhere for use by the public. It is meant to be deployed **by you, the developer**. Sortis is a single user application that you can deploy to the **NodeJS** provider of your choice (I've included instructions for deploying to Nodejitsu and Heroku). **You own the code and the data. Extend this app as you see fit. Make your own twitter mashups. Publish your code for others to learn, fork, extend and deploy**.
@@ -30,7 +34,7 @@ Then clone this repo:
 
     git clone https://github.com/amirrajan/sortis.git
 
-And `cd` into the directory (all instructions below assume you are in the `sorits` directory:
+And `cd` into the directory (all instructions below assume you are in the `sortis` directory:
 
     cd sortis
 
@@ -50,11 +54,11 @@ Set up the application with the following settings. Anywhere you see amirrajan, 
 
 <img src="twitter-app-settings.png" />
 
-continued...
-
 <img src="twitter-app-settings-2.png" />
 
-Once your twitter account is set up take the sample secret file located at `lib\secret.js.sample` and create `lib\secret.js`, update the twitter related values:
+*Note: "Allow this application to be used to Sign in with Twitter" should be **unchecked** (just poor screenshot mouse placement on my part)*
+
+Once your twitter account is set up, create `lib\secret.js` by duplicating `lib\secret.js.sample` then update *just* the four Twitter-related values, plus the 'callBackUrl' in `lib\secret.js`:
 
     //sample secret.js
     module.exports = {
@@ -175,7 +179,7 @@ now deploy:
 
     jitsu deploy
 
-note: if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for nodejitsu use `jitsu help env`.
+note: **if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run**. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for nodejitsu use `jitsu help env`.
 
 Here is what secret.js may look like after migrating everything over to environment variables:
 
@@ -212,7 +216,7 @@ Git deploy your app:
 
     git push heroku master
 
-note: if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for heroku use `heroku help config`
+note: **if you add lib/secret.js to your .gitignore it will not be deployed and the app will not run**. Ideally (once you get the hang of deploying this app), you'll want to move all the information in secret.js to environment variables in your production environment, for information on getting and setting environment variables for heroku use `heroku help config`
 
 Here is what secret.js may look like after migrating everything over to environment variables:
 
