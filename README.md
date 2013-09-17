@@ -231,13 +231,7 @@ Open the app (same as opening it in the browser):
 
 And your app should be up on Heroku.
 
-### Running on Azure
-(Todo) Links so far:
 
-http://www.hanselman.com/blog/Over400VirtualMachineImagesOfOpenSourceSoftwareStacksInTheVMDepotAzureGallery.aspx
-http://www.windowsazure.com/en-us/manage/linux/tutorials/virtual-machine-from-gallery/
-http://richorama.github.io/AzurePluginLibrary/#APM
-http://ossonazure.interoperabilitybridges.com/articles/how-to-deploy-redis-to-windows-azure-using-the-command-line-tool
-http://stackoverflow.com/a/10190091 and http://coderead.wordpress.com/2012/10/12/pubsub-with-redis-on-azure/
+### Signing up, and deploying to Azure
 
-
+Azure does not offer a PaaS offering for NodeJS + Redis at this time
